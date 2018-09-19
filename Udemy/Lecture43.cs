@@ -25,7 +25,7 @@ namespace Udemy
             }
             else
             {
-                Console.WriteLine("You provided an invalid value. Moron. It's invalid.\n");
+                Console.WriteLine("You provided an invalid value. Moron.\n");
             }
 
             // Lecture 43: Problem 2 
