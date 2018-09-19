@@ -8,13 +8,8 @@ namespace Udemy
 {
     public class Lecture43
     {
-        public static void RunLecture43()
+        public static void RunProblem1()
         {
-            // Header section 
-            StringBuilder header = new StringBuilder();
-            header.AppendLine("----------------------").AppendLine("LECTURE 43 EXERCISES").AppendLine("----------------------");
-            Console.Write(header);
-
             // Lecture 43: Problem 1 
             Console.WriteLine("Problem 1:\nEnter (float) value between 1 and 10");
             float.TryParse(Console.ReadLine(), out float value);
@@ -25,9 +20,12 @@ namespace Udemy
             }
             else
             {
-                Console.WriteLine("You provided an invalid value. Moron. It's invalid.\n");
+                Console.WriteLine("You provided an invalid value. Moron.\n");
             }
+        }
 
+        public static void RunProblem2()
+        {
             // Lecture 43: Problem 2 
             Console.WriteLine("Problem 2:\nEnter first number");
             float first = float.Parse(Console.ReadLine());
@@ -37,8 +35,10 @@ namespace Udemy
 
             float maxNumber = first > second ? first : second;
             Console.WriteLine($"The maximum of the two numbers is {maxNumber}\n");
+        }
 
-
+        public static void RunProblem3()
+        {
             // Lecture 43: Problem 3
             Console.WriteLine("Problem 3:\nEnter height");
             float height = float.Parse(Console.ReadLine());
@@ -48,7 +48,10 @@ namespace Udemy
 
             string pictureSize = height > width ? "portrait" : "landscape";
             Console.WriteLine($"The picture size is {pictureSize}\n");
+        }
 
+        public static void RunProblem4()
+        {
             // Lecture 43: Problem 4
             Console.WriteLine("Problem 4:\nEnter speed limit");
             float limit = float.Parse(Console.ReadLine());
@@ -73,6 +76,19 @@ namespace Udemy
                     Console.WriteLine($"Demerit points are: {demerit}. Be careful - if points exceed 12, license may be suspended.\n");
                 }
             }
+        }
+
+        public static void RunLecture43()
+        {
+            // Header section 
+            StringBuilder header = new StringBuilder();
+            header.AppendLine("----------------------").AppendLine("LECTURE 43 EXERCISES").AppendLine("----------------------");
+            Console.Write(header);
+
+            RunProblem1();
+            RunProblem2();
+            RunProblem3();
+            RunProblem4();
         }
 
         public static int DetermineDemeritPoints(float limit, float speed)

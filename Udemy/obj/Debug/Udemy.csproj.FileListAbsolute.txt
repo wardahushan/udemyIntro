@@ -19,3 +19,10 @@ C:\Users\wushan\Desktop\udemyIntro\Udemy\obj\Debug\Udemy.csprojAssemblyReference
 C:\Users\wushan\Desktop\udemyIntro\Udemy\obj\Debug\Udemy.csproj.CoreCompileInputs.cache
 C:\Users\wushan\Desktop\udemyIntro\Udemy\obj\Debug\Udemy.exe
 C:\Users\wushan\Desktop\udemyIntro\Udemy\obj\Debug\Udemy.pdb
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\bin\Debug\Udemy.exe.config
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\bin\Debug\Udemy.exe
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\bin\Debug\Udemy.pdb
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\obj\Debug\Udemy.csprojAssemblyReference.cache
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\obj\Debug\Udemy.csproj.CoreCompileInputs.cache
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\obj\Debug\Udemy.exe
+C:\Users\wushan\Desktop\GitHub_Repos\udemyIntro\Udemy\obj\Debug\Udemy.pdb
