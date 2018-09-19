@@ -7,13 +7,8 @@ namespace Udemy
 {
     public class Lecture56
     {
-        internal static void Problem1()
+        internal static void RunProblem1()
         {
-            // Header section 
-            StringBuilder header = new StringBuilder();
-            header.AppendLine("----------------------").AppendLine("LECTURE 56 EXERCISES").AppendLine("----------------------");
-            Console.Write(header);
-
             // Lecture 56: Problem 1 
             Console.WriteLine($"Problem 1:\n");
             List<string> names = new List<string>();
@@ -50,7 +45,7 @@ namespace Udemy
             }
         }
 
-        internal static void Problem2()
+        internal static void RunProblem2()
         {
             // Lecture 56: Problem 2
             Console.Write("Problem 2:\nEnter your name: ");
@@ -66,21 +61,26 @@ namespace Udemy
             Console.WriteLine($"Your name reversed is: {nameReversed}.");
         }
 
-        internal static void Problem3()
+        internal static void RunProblem3()
         {
-
             // Lecture 56: Problem 3 
             Console.WriteLine("\nProblem 3:\nEnter 5 distinct numbers seperated by a comma, e.g \"5, 3, 8, 1, 4\".");
-            string numbersList = Console.ReadLine();
-            List<double> numbersDouble = numbersList.Split(',').Select(x => double.Parse(x)).ToList();
+            List<double> numbersDouble = new List<double>(); 
 
-            if (numbersDouble.Count() != numbersDouble.Distinct().Count())
+            while (true)
             {
-                throw new NotSupportedException("Failed. You were supposed to enter 5 unqiue numbers!");
+                string numbersList = Console.ReadLine();
+                numbersDouble = numbersList.Split(',').Select(x => double.Parse(x)).ToList();
+
+                if (numbersDouble.Distinct().Count() == 5)
+                {
+                    break;
+                }
+
+                Console.WriteLine("Not 5 distinct numbers - try again.");
             }
 
             Console.WriteLine("\nNumbers sorted: ");
-
             numbersDouble.Sort();
 
             foreach (double number in numbersDouble)
@@ -89,10 +89,10 @@ namespace Udemy
             }
         }
 
-        internal static void Problem4()
+        internal static void RunProblem4()
         {
             // Lecture 56: Problem 4
-            Console.WriteLine("\nProblem 4:\nKeep typing in numbers to add them to a list. Type Quit to return.\n");
+            Console.WriteLine("\n\nProblem 4:\nKeep typing in numbers to add them to a list. Type Quit to return.\n");
             List<double> numbers = new List<double>();
 
             while (true)
@@ -115,7 +115,7 @@ namespace Udemy
             }
         }
 
-        internal static void Problem5()
+        internal static void RunProblem5()
         {
             // Lecture 56: Problem 5
             Console.WriteLine("\nProblem 5:\nEnter at least 5 numbers seperated by a comma, e.g \"5, 3, 8, 1, 4\".");
@@ -137,6 +137,20 @@ namespace Udemy
                     Console.Write(number + " ");
                 }
             }
+        }
+
+        internal static void RunLecture56()
+        {
+            // Header section 
+            StringBuilder header = new StringBuilder();
+            header.AppendLine("----------------------").AppendLine("LECTURE 56 EXERCISES").AppendLine("----------------------");
+            Console.Write(header);
+
+            RunProblem1();
+            RunProblem2();
+            RunProblem3();
+            RunProblem4();
+            RunProblem5();
         }
     }
 }

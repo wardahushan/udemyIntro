@@ -6,13 +6,8 @@ namespace Udemy
 {
     public class Lecture49
     {
-        internal static void RunLecture49()
+        internal static void RunProblem1()
         {
-            // Header section 
-            StringBuilder header = new StringBuilder();
-            header.AppendLine("----------------------").AppendLine("LECTURE 49 EXERCISES").AppendLine("----------------------");
-            Console.Write(header);
-
             // Lecture 49: Problem 1 
             int startNum = 1;
             int endNum = 100;
@@ -27,7 +22,10 @@ namespace Udemy
             }
 
             Console.WriteLine($"Problem 1:\nThere are {count} numbers between 1 and 100 that are divisible by 3.\n");
+        }
 
+        internal static void RunProblem2()
+        {
             // Lecture 49: Problem 2
             double total = 0;
             Console.WriteLine("Problem 2:\n");
@@ -46,7 +44,10 @@ namespace Udemy
                     total += double.Parse(response);
                 }
             }
+        }
 
+        internal static void RunProblem3()
+        {
             // Lecture 49: Problem 3 
             double factorial = 1;
             Console.WriteLine("\nProblem 3:\nEnter a number for which to calculate the factorial.");
@@ -58,42 +59,55 @@ namespace Udemy
             }
 
             Console.WriteLine($"The factorial of the number is {factorial}.");
+        }
 
+        internal static void RunProblem4()
+        {
             // Lecture 49: Problem 4
-            Console.WriteLine("\nProblem 4:\nGuess what the random lottery number is! Hint: something between 1 and 10. You get upto 4 chances.");
-            Random random = new Random();
-            int randomNumber = random.Next(1, 10);
+            Console.WriteLine("\nProblem 4:\nGuess what the random lottery number is! Hint: something between 1 and 10. You get upto 4 chances.\nMake your first guess:");
+            int randomNumber = new Random().Next(1, 10);
             int chances = 1;
             bool responseCorrect = false;
-
-            Console.WriteLine("Make a guess:");
 
             do
             {
                 responseCorrect = Int32.Parse(Console.ReadLine()) == randomNumber;
-                chances++;
 
                 if (responseCorrect == true)
                 {
-                    Console.WriteLine("Well done! You guessed the correct number!");
                     break;
                 }
 
                 Console.WriteLine("Wrong answer.");
+                chances++;
 
-            } while (chances <= 4);
+            } while (chances <= 4 && !responseCorrect);
 
-            if (responseCorrect == false)
-            {
-                Console.WriteLine("Sorry - no prize. You used all your chances.");
-            }
+            string finalResponse = responseCorrect ? "Well done! You guessed the correct number!" : "Sorry - no prize. You used all your chances.";
+            Console.WriteLine(finalResponse);
+        }
 
+        internal static void RunProblem5()
+        {
             // Lecture 49: Problem 5
             Console.WriteLine("\nProblem 5:\nEnter a series of numbers seperated by a comma, e.g \"5, 3, 8, 1, 4\".");
             string numbersList = Console.ReadLine();
             double maximum = numbersList.Split(',').Select(x => double.Parse(x)).ToList().Max();
             Console.WriteLine($"The largest number you entered is {maximum}.\n");
+        }
 
+        internal static void RunLecture49()
+        {
+            // Header section 
+            StringBuilder header = new StringBuilder();
+            header.AppendLine("----------------------").AppendLine("LECTURE 49 EXERCISES").AppendLine("----------------------");
+            Console.Write(header);
+
+            RunProblem1();
+            RunProblem2();
+            RunProblem3();
+            RunProblem4();
+            RunProblem5();
         }
     }
 }
