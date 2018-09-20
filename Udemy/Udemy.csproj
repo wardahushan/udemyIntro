@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelperFunctions.cs" />
     <Compile Include="Lecture43.cs" />
     <Compile Include="Lecture68.cs" />
     <Compile Include="Lecture56.cs" />
