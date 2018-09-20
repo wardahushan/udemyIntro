@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Udemy
@@ -23,6 +25,11 @@ namespace Udemy
             }
 
             return "Consecutive";
+        }
+
+        internal static string[] GetWordsFromFile(string path)
+        {
+            return File.ReadAllText(path).Split(' ').Select(x => Regex.Replace(x, "[^a-zA-Z]", "")).ToArray();
         }
 
         internal static List<int> ParseHyphenatedNumbersToList(string numbersList)

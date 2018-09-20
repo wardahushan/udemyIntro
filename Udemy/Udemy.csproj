@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="HelperFunctions.cs" />
     <Compile Include="Lecture43.cs" />
+    <Compile Include="Lecture76.cs" />
     <Compile Include="Lecture68.cs" />
     <Compile Include="Lecture56.cs" />
     <Compile Include="Lecture49.cs" />
