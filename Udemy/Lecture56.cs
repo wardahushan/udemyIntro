@@ -137,6 +137,8 @@ namespace Udemy
                     Console.Write(number + " ");
                 }
             }
+
+            Console.WriteLine("\n");
         }
 
         internal static void RunLecture56()
